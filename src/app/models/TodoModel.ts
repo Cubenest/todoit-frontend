@@ -1,3 +1,6 @@
-export interface TodoModel {}
+export interface TodoModel {
+    id: string;
+    text: string;
+}
 
 export namespace TodoModel {}
