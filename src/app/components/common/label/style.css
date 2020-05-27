@@ -1,0 +1,40 @@
+.container {
+    display: inline-flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.item {
+    display: inline-table;
+}
+
+.item.left {
+    margin-left: 0.5rem;
+}
+
+.item.title {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    -webkit-appearance: button;
+    padding: 15px;
+    cursor: default;
+    font: 400 13px system-ui;
+    transition: background 0.8s;
+}
+
+.btn:active {
+    background: #FBAB7E radial-gradient(circle, transparent 1%, #F7CE68 1%) center/15000%;
+}
+
+.labelicon {
+    color: #fff;
+    font-weight: 400;
+    display: inline-flex;
+    justify-content: space-evenly;
+}

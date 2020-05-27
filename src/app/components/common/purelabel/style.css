@@ -9,25 +9,33 @@
 .item {
     display: inline-table;
 }
+
 .item.left {
     margin-left: 0.5rem;
 }
+
 .item.center {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
+
 .item.right {
     margin-right: 0.5rem;
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
     -webkit-appearance: button;
-    padding: 1px 7px 2px;
+    padding: 15px;
     cursor: default;
-    font: 400 11px system-ui;
+    font: 400 13px system-ui;
+    transition: background 0.8s;
 }
 
 .btn:active {
     color: grey;
+}
+
+.btn:hover {
+    background: #FBAB7E radial-gradient(circle, transparent 1%, #F7CE68 1%) center/15000%;
 }

@@ -19,6 +19,7 @@ export const PureLabel: React.FC<PureLabelProps> = ({
     borderRadius,
     compStyle,
     onClick,
+    
 }) => {
     const styleLeft = classNames(style.item, style.left);
     const styleCenter = classNames(style.item, style.center);
@@ -38,10 +39,11 @@ export const PureLabel: React.FC<PureLabelProps> = ({
                     }),
                 ...(backgroundColor &&
                     Array.isArray(backgroundColor) && {
-                        background: `linear-gradient(to bottom right, ${backgroundColor[0]}, ${backgroundColor[1]})`,
+                        backgroundImage: `linear-gradient(to bottom right, ${backgroundColor[0]}, ${backgroundColor[1]})`,
                     }),
                 ...(borderRadius && { borderRadius }),
                 ...compStyle,
+
             }}
             onClick={onClick}
         >
