@@ -1,13 +1,13 @@
 import * as React from "react";
 import style from "./style.css";
 import classNames from "classnames";
-
+import { PureLabel } from "../purelabel";
 
 interface SegmentButtonProps {
     title?: React.ReactChild;
-    count ?: number;
-    isSelected?: boolean;
-    compStyle?: React.CSSProperties;
+    count?: number;
+    isSelected: boolean;
+    compStyle?: string;
     onClick?: (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
@@ -17,31 +17,27 @@ export const SegmentButton: React.FC<SegmentButtonProps> = ({
     isSelected,
     compStyle,
     onClick,
-    
-    
 }) => {
-
-    
-    const styleTitle = classNames(style.item, style.title);
-    const styleCount = classNames(style.item, style.count);
+    const styleTitle = classNames(
+        style.title,
+        isSelected ? style.selectedText : style.notSelectedText
+    );
+    const styleCount = classNames(
+        style.count,
+        isSelected ? style.selected : style.notSelectedText
+    );
     const styleContainerTitle = classNames(
-        style.Containertitle,
-        onClick ? style.active : null
+        compStyle,
+        isSelected ? style.selected : style.notSelected
     );
 
-    
     return (
-        <div
-            className={styleContainerTitle}
-            style={{
-                ...compStyle,
-
-            }}
+        <PureLabel
+            centreElement={<div className={styleTitle}>{title}</div>}
+            rightElement={<div className={styleCount}>{count}</div>}
             onClick={onClick}
-           
-        >
-            <div className={styleTitle}>{title}</div>
-            <div className={styleCount}>{count}</div>
-        </div>
+            compStyle={styleContainerTitle}
+            borderRadius={30}
+        />
     );
 };

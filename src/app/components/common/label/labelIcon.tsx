@@ -1,33 +1,29 @@
 import * as React from "react";
-import style from "./style.css";
-import classNames from "classnames";
-
-
+import { PureLabel } from "../purelabel";
 
 interface LabelIconProps {
     titleElement?: React.ReactChild;
-    labelicon?: React.ReactChild;
-    compStyle?: React.CSSProperties;
+    labelIcon?: React.ReactChild;
+    compStyle?: string;
+    backgroundColor?: string | string[];
+    onClick?: (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
 export const LabelIcon: React.FC<LabelIconProps> = ({
     titleElement,
-    labelicon,
+    labelIcon,
     compStyle,
-    
+    onClick,
+    backgroundColor,
 }) => {
-    const styleTitle = classNames(style.item,style.title);
-    const styleLabelIcon = classNames(style.item,style.labelicon);
-
     return (
-        <div
-            style={{
-                ...compStyle,
-
-            }}
-        >
-            <div className={styleLabelIcon}>{labelicon}</div>
-            <div className={styleTitle}>{titleElement}</div>
-        </div>
+        <PureLabel
+            centreElement={titleElement as React.ReactElement}
+            leftElement={labelIcon as React.ReactElement}
+            borderRadius={30}
+            compStyle={compStyle}
+            backgroundColor={backgroundColor}
+            onClick={onClick}
+        />
     );
 };
