@@ -2,6 +2,7 @@ import React from "react";
 import style from "./style.css";
 import { RouteComponentProps } from "react-router";
 import { PureLabel } from "../../components";
+import { SearchBar } from "app/components/search";
 export namespace App {
     export interface Props extends RouteComponentProps<void> {}
 }
@@ -14,7 +15,8 @@ export const App = ({ history, location }: App.Props) => {
     return (
         <div className={style.normal}>
             <h4>Examples</h4>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            {/* <div style={{ display: "flex", flexDirection: "column" }}>
+
                 <div style={{ display: "flex", flexDirection: "row" }}>
                     <h3>with background </h3>
                     <PureLabel
@@ -58,7 +60,9 @@ export const App = ({ history, location }: App.Props) => {
                         onClick={() => alert("clicked")}
                     />
                 </div>
-            </div>
+            
+            </div> */}
+            <SearchBar />
         </div>
     );
 };

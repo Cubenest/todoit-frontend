@@ -13,14 +13,14 @@ export namespace TodoActions {
         CLEAR_COMPLETED = "CLEAR_COMPLETED",
     }
 
-    export const addTodo = createAction<PartialPick<TodoModel, "text">>(
+    export const addTodo = createAction<PartialPick<TodoModel, "title">>(
         Type.ADD_TODO
     );
-    export const editTodo = createAction<PartialPick<TodoModel, "id">>(
+    export const editTodo = createAction<PartialPick<TodoModel, "_id">>(
         Type.EDIT_TODO
     );
-    export const deleteTodo = createAction<TodoModel["id"]>(Type.DELETE_TODO);
-    export const completeTodo = createAction<TodoModel["id"]>(
+    export const deleteTodo = createAction<TodoModel["_id"]>(Type.DELETE_TODO);
+    export const completeTodo = createAction<TodoModel["_id"]>(
         Type.COMPLETE_TODO
     );
     export const completeAll = createAction(Type.COMPLETE_ALL);
