@@ -22,8 +22,8 @@
 }
 
 .selected {
-    background-color: lightblue;
-    border: solid 1.5px blue;
+    background-color: #4a4158;
+    border: solid 1.5px #b1b1e0;
 }
 
 .notSelected {
