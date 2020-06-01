@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import style from "./style.css";
 
 import { RouteComponentProps } from "react-router";
+import * as moment from "moment";
 import { PureLabel } from "../../components";
 import { Label } from "app/components/common/label";
 import { LabelIcon } from "app/components/common/label";
@@ -12,7 +13,7 @@ import { SegmentButton } from "app/components/common/segmentbutton";
 import { SearchBar } from "app/components/search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { DueDate } from "app/components/duedate"
+import { DueDate } from "app/components/duedate";
 
 export namespace App {
     export interface Props extends RouteComponentProps<void> {}
@@ -27,10 +28,8 @@ export const App = ({ history, location }: App.Props) => {
     const iconElement = <FontAwesomeIcon icon={["fas", "stopwatch"]} />;
     const segmentButtonElement = <div>Todo</div>;
     const [isChecked, setIsChecked] = useState(false);
-    const dueDateElem = new Date(31,2020);
+    const dueDateElem = moment().add(2, "days").toDate();
     const toDateElem = new Date();
-    
-
 
     return (
         <div className={style.normal}>
@@ -216,25 +215,24 @@ export const App = ({ history, location }: App.Props) => {
                                 count={5}
                                 onClick={() => setIsChecked(!isChecked)}
                             />
-                        </div><br/>
+                        </div>
+                        <br />
                         <div
-                         style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "space-between",
-                        }}
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                            }}
                         >
                             <h3>Duedate component </h3>
                             <DueDate
-                            // dateTime={true}
-                            isComplete={false}
-                            dateTime={dueDateElem}
-                            toDate={toDateElem}
-                            backgroundColor={["#FBAB7E  ", "#F7CE68  "]}
+                                // dateTime={true}
+                                isComplete={false}
+                                dateTime={dueDateElem}
+                                toDate={toDateElem}
                             />
                         </div>
-                        <br/>
-                        
+                        <br />
                     </div>
                 </div>
             </div>
