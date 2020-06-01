@@ -25,6 +25,7 @@ export const DueDate: React.FC<DueDateProps> = ({
         normal: "#00b4f1",
         overdue: "#f25900",
     };
+    const textStyle = classNames(compStyle, style.text);
 
     const iconElement = <FontAwesomeIcon icon={["fas", "stopwatch"]} />;
 
@@ -41,7 +42,7 @@ export const DueDate: React.FC<DueDateProps> = ({
                 titleElement={"Overdue"}
                 labelIcon={iconElement as React.ReactChild}
                 backgroundColor={COLORS.overdue}
-                compStyle={style.text}
+                compStyle={textStyle}
             />
         );
     } else {
@@ -50,7 +51,7 @@ export const DueDate: React.FC<DueDateProps> = ({
                 titleElement={moment(dateTime).format("Do MMM")}
                 labelIcon={iconElement as React.ReactChild}
                 backgroundColor={COLORS.normal}
-                compStyle={style.text}
+                compStyle={textStyle}
             />
         );
     }
