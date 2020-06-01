@@ -1,19 +1,21 @@
 import React, { useState } from "react";
-import style from "./style.css";
-
 import { RouteComponentProps } from "react-router";
 import * as moment from "moment";
-import { PureLabel } from "../../components";
-import { Label } from "app/components/common/label";
-import { LabelIcon } from "app/components/common/label";
-
-import { CheckBox } from "app/components/common/checkbox";
-import { SegmentButton } from "app/components/common/segmentbutton";
-
-import { SearchBar } from "app/components/search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { DueDate } from "app/components/duedate";
+import style from "./style.css";
+import {
+    DueDate,
+    SearchBar,
+    SegmentButton,
+    CheckBox,
+    LabelIcon,
+    Label,
+    PureLabel,
+    TodoItem,
+    Title,
+    LabelContainer,
+} from "app/components";
 
 export namespace App {
     export interface Props extends RouteComponentProps<void> {}
@@ -233,6 +235,42 @@ export const App = ({ history, location }: App.Props) => {
                             />
                         </div>
                         <br />
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                            }}
+                        >
+                            <h3>Todoitem component </h3>
+                            <TodoItem
+                                checkBox={
+                                    <CheckBox
+                                        isChecked={false}
+                                        onChange={() => null}
+                                    />
+                                }
+                                title={
+                                    <Title
+                                        title={"Pick up kids from school"}
+                                        fontSize={25}
+                                    />
+                                }
+                                dueDate={
+                                    <DueDate
+                                        isComplete={true}
+                                        dateTime={dueDateElem}
+                                        toDate={toDateElem}
+                                    />
+                                }
+                                label={
+                                    <LabelContainer
+                                        items={["label1", "label2"]}
+                                    />
+                                }
+                                onClick={() => console.log("ok")}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,16 @@
+.container {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.item {
+    display: flex;
+    margin: 0 0.2rem;
+    padding: 0 !important;
+}
+
+.item:first-child {
+    margin: 0 !important;
+}

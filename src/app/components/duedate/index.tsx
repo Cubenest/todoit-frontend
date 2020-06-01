@@ -34,6 +34,7 @@ export const DueDate: React.FC<DueDateProps> = ({
             <Label
                 titleElement={"Completed"}
                 backgroundColor={COLORS.complete}
+                compStyle={textStyle}
             />
         );
     } else if (dateTime <= toDate) {

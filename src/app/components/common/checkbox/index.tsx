@@ -4,21 +4,15 @@ import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface checkBoxProps {
-    label?: React.ReactChild;
-    color?: string[];
-    isChecked?: boolean;
+    isChecked: boolean;
     disabled?: boolean;
     onChange?: React.FormEventHandler<HTMLElement>;
-    compStyle?: React.CSSProperties;
 }
 
 export const CheckBox: React.FC<checkBoxProps> = ({
-    label,
-    color,
     isChecked,
     disabled,
     onChange,
-    compStyle,
 }) => {
     const handler = !disabled ? onChange : undefined;
     const styleCheckBox = classNames(style.checkBox);

@@ -2,8 +2,8 @@ import * as React from "react";
 import { PureLabel } from "../purelabel";
 
 interface LabelProps {
-    titleElement?: React.ReactChild;
-    backgroundColor?: string | string[];
+    titleElement: React.ReactChild;
+    backgroundColor: string | string[];
     compStyle?: string;
     onClick?: (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }

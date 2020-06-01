@@ -6,3 +6,5 @@ export * from "./fontawesome/fontawesome";
 export * from "./searchbar";
 export * from "./animation";
 export * from "./searchbarresult";
+export * from "./label";
+export * from "./title";
