@@ -14,6 +14,8 @@ import { SearchBar } from "app/components/search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { DueDate } from "app/components/duedate";
+import { Login } from "app/components/Loginpage";
+import { SideBar } from "app/components/sidebar";
 
 export namespace App {
     export interface Props extends RouteComponentProps<void> {}
@@ -237,6 +239,8 @@ export const App = ({ history, location }: App.Props) => {
                 </div>
             </div>
             <SearchBar />
+            <Login />
+            <SideBar/>
         </div>
     );
 };
