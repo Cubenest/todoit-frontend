@@ -24,7 +24,7 @@ export const SegmentButton: React.FC<SegmentButtonProps> = ({
     );
     const styleCount = classNames(
         style.count,
-        isSelected ? style.selected : style.notSelectedText
+        isSelected ? style.selectedText : style.notSelectedText
     );
     const styleContainerTitle = classNames(
         compStyle,

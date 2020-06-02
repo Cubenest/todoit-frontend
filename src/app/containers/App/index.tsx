@@ -15,6 +15,7 @@ import {
     TodoItem,
     Title,
     LabelContainer,
+    SegmentContainer,
 } from "app/components";
 
 export namespace App {
@@ -30,6 +31,7 @@ export const App = ({ history, location }: App.Props) => {
     const iconElement = <FontAwesomeIcon icon={["fas", "stopwatch"]} />;
     const segmentButtonElement = <div>Todo</div>;
     const [isChecked, setIsChecked] = useState(false);
+    const [selected, setSelected] = useState(0);
     const dueDateElem = moment().add(2, "days").toDate();
     const toDateElem = new Date();
 
@@ -271,6 +273,24 @@ export const App = ({ history, location }: App.Props) => {
                                 onClick={() => console.log("ok")}
                             />
                         </div>
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                            }}
+                        >
+                            <h3>segmentbutton container</h3>
+                            <SegmentContainer
+                                items={[
+                                    { label: "ToDo", count: 6 },
+                                    { label: "Done", count: 10 },
+                                ]}
+                                selectedIndex={selected}
+                                onChange={(e, i) => setSelected(i)}
+                            />
+                        </div>
+                        <br />
                     </div>
                 </div>
             </div>
