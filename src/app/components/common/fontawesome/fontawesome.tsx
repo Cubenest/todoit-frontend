@@ -13,7 +13,17 @@ import {
     faBriefcase,
     faUserEdit,
     faPlusSquare,
+    faSignOutAlt,
+    faKey,
+    faEnvelope,
+    
+
 } from "@fortawesome/free-solid-svg-icons";
+
+import{
+    faGoogle,
+    faFacebook,
+} from '@fortawesome/free-brands-svg-icons';
 
 library.add(
     faCode,
@@ -28,6 +38,11 @@ library.add(
     faBriefcase,
     faUserEdit,
     faUserEdit,
-    faPlusSquare
+    faPlusSquare,
+    faSignOutAlt,
+    faKey,
+    faEnvelope,
+    faGoogle,
+    faFacebook,
     // more icons go here
 );

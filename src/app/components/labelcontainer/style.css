@@ -9,6 +9,7 @@
     display: flex;
     margin: 0 0.2rem;
     padding: 0 !important;
+    color: white;
 }
 
 .item:first-child {

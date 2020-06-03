@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import style from "./style.css";
+import style from "../Loginpage/style.css";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-interface LoginProps {
+interface RegisterProps {
     onChange?: React.ChangeEventHandler;
     compStyle?: string;
 }
 
-export const Login: React.FC<LoginProps> = ({
+export const Register: React.FC<RegisterProps> = ({
     onChange,
     compStyle,
 }) => {
@@ -22,8 +22,8 @@ export const Login: React.FC<LoginProps> = ({
     
     return (
         <form className={styleFormSection} onSubmit={()=>alert("")}>
-            <h2>TODOIT</h2><br/>
-            <h3>welcome back!! Please login to your account. </h3><br/>
+            <h2>Sign Up Here !!!</h2><br/>
+            <h3>Please fill below fields... </h3><br/>
             <div className={fromGroupStyle}>
                 <input type="text" name="userName" id="userName" className={style.userName} required/>
                 <span className={highLight}></span>
@@ -49,24 +49,23 @@ export const Login: React.FC<LoginProps> = ({
                         /> {""} PassWord
                 </label>
             </div>
-            <div className={style.forgotpass}>
-            <a  href="#">Forgot Password ??</a>
-            </div>
-            
             <br/>
-            <div style={{display: "flex",flexDirection: "row",justifyContent: "space-between",}}>
-                
-                <button type= "submit"  className={style.loginBtn}> login</button>
-                <button type= "submit"  className={style.signUpBtn}> Signup</button>
+            <div className={fromGroupStyle}>
+                <input type="password" name="passWord" id="passWord" className={style.passWord} required/>
+                <span className={highLight}></span>
+                <span className={lineEffect}></span>
+                <label htmlFor="passWord" className={styleUserLabel}>
+                    <FontAwesomeIcon
+                        className={style.smallIcon}
+                        icon={["fas", "key"]}
+                        size="sm"
+                        /> {""} Confirm PassWord
+                </label>
             </div>
+         
             <br/>
-            OR
-            <div style={{display: "flex",flexDirection: "row",justifyContent: "space-between",marginTop:"60px"}}>
-                
-                <button type= "submit"  className={style.signUpBtn}><FontAwesomeIcon icon={["fas", "google"]} /> Google</button>
-                <button type= "submit"  className={style.signUpBtn}><FontAwesomeIcon icon={["fas", "facebook"]} /> Facebook</button>
-            </div>
-            
+            <button type= "submit"  className={style.loginBtn}> Sign Up</button>
+          
         </form>
 
         

@@ -7,11 +7,36 @@
     width: 200px;
     font-family: sans-serif;
     letter-spacing: 0.2em;
+    border-radius: 10px;
+}
+
+.signUpBtn {
+    display: inline-block;
+    padding: 15px 20px;
+    border: 2px solid #4a405d;
+    color: #4a405d;
+    font-size: 20px;
+    width: 200px;
+    font-family: sans-serif;
+    letter-spacing: 0.2em;
+    border-radius: 10px;
 }
 
 .form {
-    margin: 25px 0;
+    margin: 25px auto;
     text-align: center;
+    width: 500px;
+    background: white;
+    padding: 50px;
+}
+
+.forgotpass {
+    padding: 20px 0;
+}
+
+.forgotpass a {
+    text-decoration: none;
+    list-style: none;
 }
 
 

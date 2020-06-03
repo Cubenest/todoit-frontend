@@ -7,8 +7,8 @@ export interface LabelContainerProps {
 }
 
 const COLORS = [
-    ["#fffb98", "#ffbe07"],
-    ["#8cf200", "#16fd00"],
+    ["#50eea0", "#8BC34A"],
+    ["#50eea0", "#1a99ff"],
     ["#00b4f1", "#00e8fe"],
 ];
 export const LabelContainer: React.FC<LabelContainerProps> = ({ items }) => {

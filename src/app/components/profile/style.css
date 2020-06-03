@@ -35,5 +35,8 @@ img {
 }
 
 .label {
-    margin-right: 4px;
+    font-family: sans-serif;
+    margin-right: 20px;
+    border-left: 2px solid #b5b5b5;
+    padding-left: 13px;
 }

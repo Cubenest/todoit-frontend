@@ -27,7 +27,7 @@ export const SearchTodoResult: React.FC<SearchTodoResultProps> = ({
     };
     return (
         <div>
-            <p>Todos</p>
+            <p className="todosHeader" >Todos</p>
             <ListContainer
                 className={styleSheet.list}
                 row={Row}

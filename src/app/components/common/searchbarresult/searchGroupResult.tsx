@@ -44,7 +44,7 @@ export const SearchGroupResult: React.FC<SearchGroupResultProps> = ({
     };
     return (
         <div>
-            <p>Groups</p>
+            <p className="groupsHeader">Groups</p>
             <ListContainer
                 className={styleSheet.list}
                 row={Row}

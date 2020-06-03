@@ -23,3 +23,17 @@
     justify-content: center;
     padding: 1rem;
 }
+
+.groupsHeader {
+    background: #009688;
+    color: white;
+    padding: 15px;
+    margin: 0;
+}
+
+.todosHeader {
+    background: cornflowerblue;
+    color: white;
+    padding: 15px;
+    margin: 0;
+}

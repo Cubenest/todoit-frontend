@@ -3,7 +3,7 @@
 }
 
 .popoverContent {
-    width: 200px;
+    width: 100px;
     background-color: #fff;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding-box;
@@ -13,6 +13,8 @@
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     outline: 0;
+    padding: 10px 20px;
+    font-family: sans-serif;
 }
 
 .popoverContent.arrow {

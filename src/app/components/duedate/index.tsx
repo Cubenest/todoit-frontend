@@ -21,9 +21,9 @@ export const DueDate: React.FC<DueDateProps> = ({
     compStyle,
 }) => {
     const COLORS = {
-        complete: "#8cf200",
-        normal: "#00b4f1",
-        overdue: "#f25900",
+        complete: "#50eea0",
+        normal: "#86c9e0",
+        overdue: "#e85c5c",
     };
     const textStyle = classNames(compStyle, style.text);
 

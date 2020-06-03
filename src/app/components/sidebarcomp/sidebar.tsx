@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.css";
-import classNames from "classNames";
+import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface SideBarProps {
@@ -34,7 +34,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isSelected, compStyle }) => {
                     </li>
                     <li>
                         <a href="#">
-                            <FontAwesomeIcon icon={["fas", "list"]} /> List
+                            <FontAwesomeIcon icon={["fas", "th-list"]} /> List
                         </a>
                     </li>
                     <li>

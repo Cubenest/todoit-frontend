@@ -7,4 +7,5 @@ export * from "./segmentcontainer";
 export * from "./profile";
 export * from "./popover";
 export * from "./Loginpage";
+export * from "./registerpage";
 export * from "./sidebarcomp";

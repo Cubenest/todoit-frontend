@@ -16,7 +16,9 @@ import {
     LabelContainer,
     SegmentContainer,
     SearchBar,
+    SideBar,
     Login,
+    Register,
 } from "app/components";
 
 export namespace App {
@@ -256,7 +258,7 @@ export const App = ({ history, location }: App.Props) => {
                                 title={
                                     <Title
                                         title={"Pick up kids from school"}
-                                        fontSize={25}
+                                        fontSize={20}
                                     />
                                 }
                                 dueDate={
@@ -296,7 +298,7 @@ export const App = ({ history, location }: App.Props) => {
                 </div>
             </div>
             <Login />
-            {/* <SideBar /> */}
+            <Register />
         </div>
     );
 };
