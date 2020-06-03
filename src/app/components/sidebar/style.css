@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=B612&display=swap');
+
+/* Toggle Styles */
+
+.viewport {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar {
+    z-index: 1000;
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    background: #43425d;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.sidebar header {
+    background-color: #8684ba;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+    font-family: 'B612', sans-serif;
+}
+
+.sidebar header a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-family: 'B612', sans-serif;
+}
+
+.sidebar header a:hover {
+    color: #fff;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.nav {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.sidebar .nav a {
+    border-bottom: 1px solid #455A64;
+    color: #CFD8DC;
+    font-size: 14px;
+    padding: 16px 24px;
+    font-family: 'B612', sans-serif;
+}
+
+.sidebar .nav a:hover {
+    color: #ECEFF1;
+    background-color: #35303e;
+    border-left: 5px solid #8684ba;
+    transition: all .5s ease 0s;
+}
+
+.activenav {
+    color: #ECEFF1;
+    background-color: #35303e;
+    border-left: 5px solid #8684ba;
+    transition: all .5s ease 0s;
+}
+
+.sidebar .nav a i {
+    margin-right: 16px;
+}

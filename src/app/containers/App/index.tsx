@@ -295,6 +295,8 @@ export const App = ({ history, location }: App.Props) => {
                 </div>
             </div>
             <SearchBar />
+            <Login />
+            <SideBar />
         </div>
     );
 };

@@ -4,3 +4,4 @@ export * from "./search";
 export * from "./todoItem";
 export * from "./labelcontainer";
 export * from "./segmentcontainer";
+export * from "./sidebar";
