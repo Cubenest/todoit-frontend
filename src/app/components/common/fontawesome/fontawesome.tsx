@@ -6,6 +6,13 @@ import {
     faSearch,
     faStopwatch,
     faCheck,
+    faHome,
+    faCalendar,
+    faThList,
+    faTasks,
+    faBriefcase,
+    faUserEdit,
+    faPlusSquare,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -13,6 +20,14 @@ library.add(
     faHighlighter,
     faSearch,
     faStopwatch,
-    faCheck
+    faCheck,
+    faHome,
+    faCalendar,
+    faThList,
+    faTasks,
+    faBriefcase,
+    faUserEdit,
+    faUserEdit,
+    faPlusSquare
     // more icons go here
 );

@@ -4,17 +4,15 @@ import classNames from "classnames";
 import style from "./style.css";
 export interface SerachBoxProps {
     isOpen?: boolean;
-    onClick?: (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
     onFocus?: (ev: React.FocusEvent<HTMLInputElement>) => void;
     additionalStyles?: any;
-    onToggle?: (val: boolean) => void;
+    onChange: (ev: React.ChangeEvent<HTMLInputElement>) => void;
 }
 export const SearchBox: React.FC<SerachBoxProps> = ({
     isOpen,
-    onClick,
     onFocus,
     additionalStyles,
-    onToggle,
+    onChange,
 }) => {
     let nameInput: HTMLInputElement;
     console.log("additionalStyles", additionalStyles);
@@ -28,11 +26,7 @@ export const SearchBox: React.FC<SerachBoxProps> = ({
         style.frame,
         additionalStyles ? additionalStyles : null
     );
-    // divStyle.width += baseStyles.icon.width + 5
 
-    const toggle = (t: React.FocusEvent<HTMLInputElement>) => {
-        onFocus && onFocus(t);
-    };
     return (
         <div className={divStyle}>
             <input
@@ -43,8 +37,9 @@ export const SearchBox: React.FC<SerachBoxProps> = ({
                 type="text"
                 className={textStyle}
                 placeholder="Type here..."
-                onFocus={toggle}
-                onBlur={toggle}
+                onFocus={onFocus}
+                onBlur={onFocus}
+                onChange={onChange}
             />
             <div className={style.icon} onClick={() => nameInput.focus()}>
                 <FontAwesomeIcon

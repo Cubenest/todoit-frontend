@@ -4,4 +4,7 @@ export * from "./search";
 export * from "./todoItem";
 export * from "./labelcontainer";
 export * from "./segmentcontainer";
-export * from "./sidebar";
+export * from "./profile";
+export * from "./popover";
+export * from "./Loginpage";
+export * from "./sidebarcomp";

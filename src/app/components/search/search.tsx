@@ -4,12 +4,12 @@ import { SearchBox, SearchBarContainer } from "../common";
 import { makeExpanding } from "../common/";
 import { TodoModel } from "app/models";
 
-export interface SearchBarProps {}
+export interface SearchBarProps {
+    onChange: (ev: React.ChangeEvent<HTMLInputElement>) => void;
+    onFocus?: (ev: React.FocusEvent<HTMLInputElement>) => void;
+}
 
-export const SearchBar: React.FC<SearchBarProps> = ({}) => {
-    const handleChange = (e: any) => {};
-    const [isOpen, setIsOpen] = useState(false);
-
+export const SearchBar: React.FC<SearchBarProps> = ({ onChange, onFocus }) => {
     const ExpandingSearchBox = makeExpanding(SearchBox);
 
     const group = {
@@ -31,8 +31,8 @@ export const SearchBar: React.FC<SearchBarProps> = ({}) => {
     };
     return (
         <div>
-            <ExpandingSearchBox />
-            <SearchBarContainer
+            <ExpandingSearchBox onChange={onChange} />
+            {/* <SearchBarContainer
                 groups={[
                     group,
                     group,
@@ -65,7 +65,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({}) => {
                     todo,
                     todo,
                 ]}
-            />
+            /> */}
         </div>
     );
 };

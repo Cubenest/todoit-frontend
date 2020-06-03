@@ -6,16 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from "./style.css";
 import {
     DueDate,
-    SearchBar,
     SegmentButton,
     CheckBox,
     LabelIcon,
     Label,
     PureLabel,
-    TodoItem,
     Title,
+    TodoItem,
     LabelContainer,
     SegmentContainer,
+    SearchBar,
+    Login,
 } from "app/components";
 
 export namespace App {
@@ -294,9 +295,8 @@ export const App = ({ history, location }: App.Props) => {
                     </div>
                 </div>
             </div>
-            <SearchBar />
             <Login />
-            <SideBar />
+            {/* <SideBar /> */}
         </div>
     );
 };
