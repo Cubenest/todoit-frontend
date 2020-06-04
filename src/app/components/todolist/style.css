@@ -1,0 +1,5 @@
+.item {
+    display: flex;
+    border-radius: 0.8rem;
+    background-color: white;
+}

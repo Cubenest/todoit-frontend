@@ -1,9 +1,12 @@
 .searchContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #ffffff;
     margin: 0.2rem;
     border-radius: 0.5rem;
+    height: 260px;
+    position: absolute;
+    z-index: 99;
 }
 
 .emptyContainer {
@@ -15,13 +18,14 @@
 
 .list {
     border: 1px solid #d9dddd;
+    border-bottom: none;
 }
 
 .item {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    background-color: #ffffff;
 }
 
 .groupsHeader {

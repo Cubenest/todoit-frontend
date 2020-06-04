@@ -1,22 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./style.css";
 import { RouteComponentProps } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { SearchBar, Profile, Popover, SideBar } from "../../components";
+import {
+    SearchBar,
+    Profile,
+    Popover,
+    SegmentContainer,
+    TodoList,
+    SideBar,
+} from "../../components";
 
 export namespace Home {
     export interface Props extends RouteComponentProps<void> {}
 }
 
+const staticData = [
+    {
+        _id: "123df",
+        title: "Pickup kids from school!",
+        desc: "",
+        labels: ["label1", "label2"],
+        dueDate: "2020-07-10",
+        status: 0,
+        priority: 0,
+        groupId: "",
+    },
+    {
+        _id: "123de",
+        title: "Don't forget to close the gate!!",
+        desc: "",
+        labels: ["label1", "label2"],
+        dueDate: "2020-06-03",
+        status: 2,
+        priority: 0,
+        groupId: "",
+    },
+    {
+        _id: "123de",
+        title: "This is going to look awesome",
+        desc: "",
+        labels: ["label1", "label2"],
+        dueDate: "2020-06-03",
+        status: 1,
+        priority: 0,
+        groupId: "",
+    },
+];
+
 export const Home = ({ history, location }: Home.Props) => {
+    const [selectedIndex, setSelected] = useState(0);
     return (
         <div className={style.container}>
-            {/* <div className={style.sidebar}>
+            <div className={style.sidebar}>
                 <div className={style.logo}>TodoIt</div>
-                <div className={style.sidedBarContainer}>sidebar</div>
-            </div> */}
-            <SideBar/>
+                <div className={style.sidedBarContainer}>
+                    <SideBar />
+                </div>
+            </div>
             <div className={style.body}>
                 <div className={style.top}>
                     <div className={style.search}>
@@ -35,18 +77,32 @@ export const Home = ({ history, location }: Home.Props) => {
                             }
                             trigger="click"
                         >
-                            <div className={style.popovertext}> 
+                            <div className={style.popovertext}>
                                 <FontAwesomeIcon
                                     className={style.smallIcon}
                                     icon={["fas", "sign-out-alt"]}
                                     size="lg"
                                 />
                                 Logout
-                             </div>
+                            </div>
                         </Popover>
                     </div>
                 </div>
-                <div className={style.body}></div>
+                <div className={style.bodyContainer}>
+                    <div className={style.segment}>
+                        <SegmentContainer
+                            items={[
+                                { label: "Todo", count: 2 },
+                                { label: "Done", count: 5 },
+                            ]}
+                            selectedIndex={selectedIndex}
+                            onChange={(e, i) => setSelected(i)}
+                        />
+                    </div>
+                    <div className={style.todoList}>
+                        <TodoList items={staticData} />
+                    </div>
+                </div>
             </div>
         </div>
     );

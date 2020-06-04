@@ -32,7 +32,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onChange, onFocus }) => {
     return (
         <div>
             <ExpandingSearchBox onChange={onChange} />
-            {/* <SearchBarContainer
+            <SearchBarContainer
                 groups={[
                     group,
                     group,
@@ -65,7 +65,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onChange, onFocus }) => {
                     todo,
                     todo,
                 ]}
-            /> */}
+            />
         </div>
     );
 };

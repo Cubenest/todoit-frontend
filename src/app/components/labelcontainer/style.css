@@ -8,7 +8,7 @@
 .item {
     display: flex;
     margin: 0 0.2rem;
-    padding: 0 !important;
+    padding: 3px !important;
     color: white;
 }
 

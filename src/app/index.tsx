@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router";
-// import { Home as TodoApp } from "app/containers/Home";
-import { App as TodoApp } from "app/containers/App";
+import { Home as TodoApp } from "app/containers/Home";
+// import { App as TodoApp } from "app/containers/App";
 
 import { hot } from "react-hot-loader";
 

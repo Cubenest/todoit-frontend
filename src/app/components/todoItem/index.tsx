@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./style.css";
+import customStyle from "./style.css";
 import classNames from "classnames";
 export interface TodoItemProps {
     title: React.ReactChild;
@@ -7,9 +7,9 @@ export interface TodoItemProps {
     dueDate: React.ReactChild;
     label: React.ReactChild;
     onClick?: (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+    style?: any;
+    additionalStyle: String;
 }
-
-const itemStyle = classNames(style.item, "drop-shadow-all");
 
 export const TodoItem: React.FC<TodoItemProps> = ({
     checkBox,
@@ -17,15 +17,19 @@ export const TodoItem: React.FC<TodoItemProps> = ({
     label,
     dueDate,
     onClick,
+    style,
+    additionalStyle,
 }) => {
+    const itemStyle = classNames(additionalStyle, "drop-shadow-all");
+
     return (
-        <div className={itemStyle} onClick={onClick}>
-            <div className={style.checkBox}>{checkBox}</div>
-            <div className={style.center}>
-                <div className={style.title}>{title}</div>
-                <div className={style.label}>{label}</div>
+        <div style={style} className={itemStyle} onClick={onClick}>
+            <div className={customStyle.checkBox}>{checkBox}</div>
+            <div className={customStyle.center}>
+                <div className={customStyle.title}>{title}</div>
+                <div className={customStyle.label}>{label}</div>
             </div>
-            <div className={style.duedate}>{dueDate}</div>
+            <div className={customStyle.duedate}>{dueDate}</div>
         </div>
     );
 };

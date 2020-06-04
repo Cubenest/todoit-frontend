@@ -1,4 +1,5 @@
 @import "src/variables";
+@import url("https://fonts.googleapis.com/css2?family=B612&display=swap");
 
 *:active,
 *:focus {
@@ -9,6 +10,10 @@
 
 .btn {
     cursor: pointer;
+}
+
+body {
+    font-family: "B612";
 }
 
 .text-backdrop {

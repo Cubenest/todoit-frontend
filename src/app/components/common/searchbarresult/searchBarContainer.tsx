@@ -28,17 +28,4 @@ export const SearchBarContainer: React.FC<SearchBarContainerProps> = ({
             )}
         </div>
     );
-    // if (groups && groups.length <= 0) {
-    //     return <SearchEmpty />;
-    // }
-    // if (groups && groups.length > 0) {
-    //     return <SearchGroupResult items={groups} />;
-    // }
-    // if (todos && todos.length <= 0) {
-    //     return <SearchTodoResult items={todos} />;
-    // }
-    // if (todos && todos.length > 0) {
-    //     return <SearchEmpty />;
-    // }
-    // return null;
 };

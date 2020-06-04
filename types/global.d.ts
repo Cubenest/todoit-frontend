@@ -5,7 +5,6 @@ declare module "*.css" {
     const styles: any;
     export = styles;
 }
-
 declare module "*.jpg" {
     const jpg: string;
     export = jpg;

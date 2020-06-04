@@ -12,8 +12,8 @@
 .top {
     display: flex;
     flex-direction: row;
-    padding: 10px 15px 10px 20px;
-    background: white;
+    padding: 8px 8px;
+    background-color: #ffff;
 }
 
 .search {
@@ -40,7 +40,7 @@ body {
     justify-content: center;
     padding: 0.8rem;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 900;
     color: white;
     background: #8684ba;
 }
@@ -55,4 +55,19 @@ body {
 .popovertext {
     font-size: 14px;
     color: #8684ba;
+}
+.segment {
+    display: "flex";
+}
+
+.bodyContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex: 1;
+    background-color: #f0f0f0;
+}
+
+.todoList {
+    height: 100%;
 }

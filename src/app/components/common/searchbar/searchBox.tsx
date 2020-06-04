@@ -34,6 +34,7 @@ export const SearchBox: React.FC<SerachBoxProps> = ({
                     nameInput = input as HTMLInputElement;
                 }}
                 name="search"
+                autoComplete="off"
                 type="text"
                 className={textStyle}
                 placeholder="Search For Tasks, List, etc..."

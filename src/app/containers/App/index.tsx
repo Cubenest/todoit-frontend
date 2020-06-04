@@ -274,6 +274,7 @@ export const App = ({ history, location }: App.Props) => {
                                     />
                                 }
                                 onClick={() => console.log("ok")}
+                                additionalStyle={""}
                             />
                         </div>
                         <div

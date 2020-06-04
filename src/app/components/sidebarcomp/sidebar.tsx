@@ -17,9 +17,6 @@ export const SideBar: React.FC<SideBarProps> = ({ isSelected, compStyle }) => {
     return (
         <div className={viewportGroupStyle}>
             <div className={styleSidebar}>
-                <header>
-                    <a href="#">TODOIT</a>
-                </header>
                 <ul className={styleNav}>
                     <li>
                         <a href="#">
