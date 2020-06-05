@@ -30,7 +30,7 @@ export const SearchTodoResult: React.FC<SearchTodoResultProps> = ({
         );
     };
     return (
-        <div style={{ height: 200, width: 300 }}>
+        <div style={{ height: 200, width: 400 }}>
             <p>Todos</p>
             <ListContainer
                 className={styleSheet.list}

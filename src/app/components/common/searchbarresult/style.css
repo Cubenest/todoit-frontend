@@ -9,6 +9,15 @@
     z-index: 99;
 }
 
+.searchContainer p {
+    padding: 15px 20px;
+    text-align: center;
+    background: #8684ba;
+    color: white;
+    margin: 0;
+    border: 2px solid;
+}
+
 .emptyContainer {
     display: flex;
     align-items: center;
@@ -25,7 +34,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #dedcff;
+    font-family: sans-serif;
+    letter-spacing: 0.15em;
 }
 
 .groupsHeader {

@@ -8,3 +8,4 @@ export * from "./animation";
 export * from "./searchbarresult";
 export * from "./label";
 export * from "./title";
+export * from "./groupitem";

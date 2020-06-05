@@ -36,7 +36,7 @@ export const SearchGroupResult: React.FC<SearchGroupResultProps> = ({
         );
     };
     return (
-        <div style={{ height: 200, width: 150 }}>
+        <div style={{ height: 200, width: 200 }}>
             <p>Groups</p>
             <ListContainer
                 className={styleSheet.list}

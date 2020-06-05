@@ -16,6 +16,9 @@ import {
     faSignOutAlt,
     faKey,
     faEnvelope,
+    faAngleUp,
+    faAngleDown,
+    faShareAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -38,6 +41,9 @@ library.add(
     faKey,
     faEnvelope,
     faGoogle,
-    faFacebook
+    faFacebook,
+    faAngleUp,
+    faAngleDown,
+    faShareAlt,
     // more icons go here
 );

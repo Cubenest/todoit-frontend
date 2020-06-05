@@ -19,6 +19,7 @@ import {
     SideBar,
     Login,
     Register,
+    GroupItem,
 } from "app/components";
 
 export namespace App {
@@ -295,6 +296,18 @@ export const App = ({ history, location }: App.Props) => {
                             />
                         </div>
                         <br />
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                            }}
+                        >
+                            <h3>Group item Component</h3>
+                            <GroupItem
+                                
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

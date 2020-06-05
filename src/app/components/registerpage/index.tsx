@@ -25,7 +25,7 @@ export const Register: React.FC<RegisterProps> = ({
             <h2>Sign Up Here !!!</h2><br/>
             <h3>Please fill below fields... </h3><br/>
             <div className={fromGroupStyle}>
-                <input type="text" name="userName" id="userName" className={style.userName} required/>
+                <input type="email" name="userName" id="userName" className={style.userName} required/>
                 <span className={highLight}></span>
                 <span className={lineEffect}></span>
                 <label htmlFor="userName" className={styleUserLabel}>

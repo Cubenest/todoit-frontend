@@ -186,3 +186,11 @@ input:focus~.highlight {
         background: transparent;
     }
 }
+
+.errormessage {
+    color: tomato;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+}
