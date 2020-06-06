@@ -19,6 +19,9 @@ import {
     faAngleUp,
     faAngleDown,
     faShareAlt,
+    faTimes,
+    faExclamationTriangle,
+    faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -45,5 +48,8 @@ library.add(
     faAngleUp,
     faAngleDown,
     faShareAlt,
+    faTimes,
+    faExclamationTriangle,
+    faThumbsUp,
     // more icons go here
 );

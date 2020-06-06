@@ -20,8 +20,11 @@ import {
     Login,
     Register,
     GroupItem,
+    WarningMessage,
+    SucessMessage,
+    LoaderComp,
 } from "app/components";
-
+import {ErrorMessage} from "app/components/common/errormessage";
 export namespace App {
     export interface Props extends RouteComponentProps<void> {}
 }
@@ -321,6 +324,57 @@ export const App = ({ history, location }: App.Props) => {
                                 onChange={e => setTask(e.target.value)}
                             />
                             </GroupItem>
+                        </div>
+                        <br/>
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                            }}
+                        >
+                            <h3>Error message item Component</h3>
+                            <ErrorMessage
+                            message={"error message "}
+                            compStyle={style.dropshadowall}
+                            />
+                        </div><br/>
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                            }}
+                        >
+                            <h3>Error message item Component</h3>
+                            <WarningMessage
+                            message={"Warning message "}
+                            compStyle={style.dropshadowall}
+                            />
+                        </div><br/>
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                            }}
+                        >
+                            <h3>Error message item Component</h3>
+                            <SucessMessage
+                            message={"Sucess message "}
+                            compStyle={style.dropshadowall}
+                            />
+                        </div>
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                            }}
+                        >
+                            <h3>Error message item Component</h3>
+                            <LoaderComp
+                            />
                         </div>
                     </div>
                 </div>

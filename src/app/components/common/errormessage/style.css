@@ -1,0 +1,22 @@
+.errorcontainer {
+    width: auto;
+    min-width: 500px;
+    color: #d2636e;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: space-between;
+    justify-content: space-between;
+    padding: 20px;
+    line-height: 40px;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.errormessage {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: sans-serif;
+}

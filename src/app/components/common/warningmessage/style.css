@@ -1,0 +1,22 @@
+.warningcontainer {
+    width: auto;
+    min-width: 500px;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: space-between;
+    justify-content: space-between;
+    padding: 20px;
+    line-height: 40px;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.warningmessage {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
