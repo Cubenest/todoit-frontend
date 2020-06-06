@@ -39,6 +39,10 @@ export const App = ({ history, location }: App.Props) => {
     const dueDateElem = moment().add(2, "days").toDate();
     const toDateElem = new Date();
 
+    // GroupItem
+    
+    const [task, setTask] = useState("");
+
     return (
         <div className={style.normal}>
             <h4>Todo It Pure label Component</h4>
@@ -305,8 +309,18 @@ export const App = ({ history, location }: App.Props) => {
                         >
                             <h3>Group item Component</h3>
                             <GroupItem
-                                
+                            title={task}
+                            placeholder="Add New Group"
+                            type="input"
+                            >
+                            <input
+                                type="text"
+                                name="task"
+                                placeholder="Write Group Name"
+                                value={task}
+                                onChange={e => setTask(e.target.value)}
                             />
+                            </GroupItem>
                         </div>
                     </div>
                 </div>

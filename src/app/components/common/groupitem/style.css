@@ -1,102 +1,30 @@
-/* Toggle Styles */
-
-.viewport {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    display: flex;
-    flex: 1;
-}
-
-
-/* Sidebar Styles */
-
-.sidebar {
-    z-index: 1000;
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    background: #43425d;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.sidebar header {
-    background-color: #8684ba;
+.groupItemDiv {
+    background-color: #4a4158;
     font-size: 20px;
-    line-height: 70px;
+    width: 300px;
     text-align: center;
     font-family: "B612", sans-serif;
-}
-
-.sidebar header a {
     color: #fff;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     text-decoration: none;
-    font-family: "B612", sans-serif;
+    padding: 20px;
+    transition: all 0.5s ease 0s;
+    overflow-x: auto;
 }
 
-.sidebar header a:hover {
-    color: #fff;
-}
-
-.nav>li>a,
-.navdropdown>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-}
-
-.nav,
-.navdropdown {
-    padding: 0;
-    list-style: none;
-    margin: 0;
-}
-
-.sidebar .nav a,
-.navdropdown a {
-    border-bottom: 1px solid #455a64;
-    color: #cfd8dc;
-    font-size: 14px;
-    padding: 16px 24px;
-    font-family: "B612", sans-serif;
-}
-
-.sidebar .nav a:hover,
-.navdropdown a:hover {
+.groupItemDiv:hover {
     color: #eceff1;
     background-color: #35303e;
     border-left: 5px solid #8684ba;
     transition: all 0.5s ease 0s;
 }
 
-.activenav {
-    color: #eceff1;
-    background-color: #35303e;
-    border-left: 5px solid #8684ba;
-    transition: all 0.5s ease 0s;
-}
-
-.sidebar .nav a i {
-    margin-right: 16px;
-}
-
-
-/* dropdown */
-
-.dropdownmenu {
-    display: block;
-    position: relative;
-}
-
-.dropdownnone {
-    display: block;
-    position: relative;
+.groupItemDiv input {
+    padding: 10px 20px;
+    border: none;
+    background: #8e97ff;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
 }

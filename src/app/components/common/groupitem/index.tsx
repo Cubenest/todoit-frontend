@@ -1,40 +1,59 @@
-import React ,{ useState } from "react";
+import React ,{ useState, useEffect  } from "react";
 import style from "./style.css";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface GroupItemProps {
     title?: string;
+    type?:string;
+    placeholder?:string;
+    children?:React.ReactElement;
     isSelected?:boolean;
-    iconElemnt?:any;
     onClick?: (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
     compStyle?: string;
-    isEdit?: boolean;
+    
 }
 
-export const GroupItem: React.FC<GroupItemProps> = ({ title, iconElemnt, isSelected,compStyle,isEdit,onClick  }) => {
-    const viewportGroupStyle = classNames(style.viewport);
-    const styleSidebar = classNames(style.sidebar);
-    const styleNav = classNames(style.nav);
-    const styleNavActive = classNames(style.activenav);
-    const [dropDown, setdropDown] = useState(false);
-    const [dropDownList, setdropDownList] = useState(false);
-    const toggleDrop = () =>setdropDown(!dropDown);
-    const toggleDropList = () =>setdropDownList(!dropDownList);
+export const GroupItem: React.FC<GroupItemProps> = ({ 
+    title, 
+    type,
+    placeholder,
+    children,
+    isSelected,
+    compStyle,
+    onClick  
+}) => {
+    const groupItemDivStyle = classNames(style.groupItemDiv);
+
+    const [isEditing, setEditing] = useState(false);
+
+    const handleKeyDown = (event:any, type:any) => {
+        // Handle when key is pressed
+        console.log(handleKeyDown);
+      };
+
     return (
-        <div className={viewportGroupStyle}>
-            <div className={styleSidebar}>
-                <ul className={styleNav}>
-                    <li>
-                        <a href="#">
-                            Add New Group
-                            <div style={{float:"right"}}>
-                           <FontAwesomeIcon icon={["fas", "share-alt"]} />
-                            </div> 
-                        </a>
-                    </li>
-                </ul>
-            </div>
+
+    <div className={groupItemDivStyle}>
+      {isEditing ? (
+        <div 
+          onBlur={() => setEditing(false)}
+          onKeyDown={e => handleKeyDown(e, type)}
+        >
+          {children}
         </div>
+      ) : (
+        <div 
+          onClick={() => setEditing(true)}
+        >
+          <span>
+            {title || placeholder || "Editable content"}
+          </span>
+        </div>
+      )}
+        <div style={{float:"right"}}>
+            <FontAwesomeIcon icon={["fas", "share-alt"]} />
+        </div> 
+    </div>
     );
 };
