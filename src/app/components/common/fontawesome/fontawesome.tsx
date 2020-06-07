@@ -22,6 +22,9 @@ import {
     faTimes,
     faExclamationTriangle,
     faThumbsUp,
+    faTimesCircle,
+    faPlus,
+    faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -51,5 +54,8 @@ library.add(
     faTimes,
     faExclamationTriangle,
     faThumbsUp,
+    faTimesCircle,
+    faPlus,
+    faPlusCircle
     // more icons go here
 );

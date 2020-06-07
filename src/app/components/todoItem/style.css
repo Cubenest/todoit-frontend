@@ -29,4 +29,6 @@
 .title {
     width: 25rem;
     height: 2rem;
+    align-items: center;
+    display: flex;
 }

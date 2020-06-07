@@ -13,3 +13,5 @@ export * from "./errormessage";
 export * from "./sucessmessage";
 export * from "./warningmessage";
 export * from "./loadercomp";
+export * from "./modal";
+export * from "./radiogroup";

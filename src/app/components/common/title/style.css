@@ -1,5 +1,11 @@
 .title {
     display: flex;
+    flex: 1;
     color: black;
     font-weight: 800;
+}
+
+.input {
+    display: flex;
+    width: 100%;
 }

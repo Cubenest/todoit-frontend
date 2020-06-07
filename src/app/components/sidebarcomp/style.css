@@ -13,7 +13,6 @@
 /* Sidebar Styles */
 
 .sidebar {
-    z-index: 1000;
     position: relative;
     float: left;
     width: 100%;

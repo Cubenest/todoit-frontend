@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./style.css";
 import { RouteComponentProps } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +10,7 @@ import {
     SegmentContainer,
     TodoList,
     SideBar,
+    TodoItemModal,
 } from "../../components";
 
 export namespace Home {
@@ -51,6 +52,10 @@ const staticData = [
 
 export const Home = ({ history, location }: Home.Props) => {
     const [selectedIndex, setSelected] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    useEffect(() => {}, []);
+
     return (
         <div className={style.container}>
             <div className={style.sidebar}>
@@ -103,6 +108,13 @@ export const Home = ({ history, location }: Home.Props) => {
                         <TodoList items={staticData} />
                     </div>
                 </div>
+                <TodoItemModal
+                    onclose={(data) => {
+                        console.log(data);
+                        setIsModalOpen(false);
+                    }}
+                    isOpen={isModalOpen}
+                />
             </div>
         </div>
     );

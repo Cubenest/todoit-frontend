@@ -6,7 +6,7 @@
     border-radius: 0.5rem;
     height: 260px;
     position: absolute;
-    z-index: 99;
+    z-index: 1;
 }
 
 .searchContainer p {

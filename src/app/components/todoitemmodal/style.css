@@ -1,0 +1,36 @@
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    padding: 0 !important;
+}
+
+.item {
+    display: flex;
+    border-radius: 0.8rem;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.duedate {
+}
+
+.low {
+    background-image: linear-gradient(to bottom right, #2cc990, #2cc990);
+}
+
+.med {
+    background-image: linear-gradient(to bottom right, #ff7416, #f29b34);
+}
+
+.high {
+    background-image: linear-gradient(to bottom right, #ee5f5b, #ff7416);
+}
+
+.title {
+    width: 30rem;
+    height: 3.5rem;
+}

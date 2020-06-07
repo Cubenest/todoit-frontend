@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Switch } from "react-router";
-// import { Home as TodoApp } from "app/containers/Home";
-import { App as TodoApp } from "app/containers/App";
+import { Home } from "app/containers/Home";
 
 import { hot } from "react-hot-loader";
+import { PrivateRoute } from "./components/privateroute";
+import { LoginPage } from "./containers/Login";
 
 export const App = hot(module)(() => (
     <Switch>
-        <Route path="/" component={TodoApp} />
+        <PrivateRoute exact path="/" component={Home} />
+        <Route path="/login/:token?" component={LoginPage} />
     </Switch>
 ));

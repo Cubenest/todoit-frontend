@@ -15,3 +15,7 @@
 .item:first-child {
     margin: 0 !important;
 }
+
+.editContainer {
+    margin-top: 10px;
+}

@@ -1,3 +1,7 @@
+import { createBrowserHistory } from "history";
+
+export const API_URL = "http://localhost:3001/";
+
 export function omit<T extends object, K extends keyof T>(
     target: T,
     ...omitKeys: K[]
@@ -23,3 +27,12 @@ export enum STATUS {
     Archived = 3,
     Trashed = 3,
 }
+
+export interface ModalData {
+    title: string;
+    labels: string[];
+    priority: string;
+    dueDate: Date | null;
+}
+
+export const history = createBrowserHistory();
