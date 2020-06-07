@@ -91,6 +91,7 @@ export const Home = ({ history, location }: Home.Props) => {
                 setSelectedGroup(group);
                 const todos = await todoService.getAllOngoingTodo(group._id);
                 setTodoList(todos.data);
+                setTodoListComplete({ todos: [], count: 0 });
                 setIsLoading(false);
             } catch (error) {
                 setIsLoading(false);
@@ -164,6 +165,7 @@ export const Home = ({ history, location }: Home.Props) => {
                     todos: [...clone],
                     count: todoList.count - 1,
                 });
+                setIsLoading(false);
             }
         } catch (error) {
             setIsLoading(false);

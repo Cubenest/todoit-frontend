@@ -1,6 +1,6 @@
 import { createBrowserHistory } from "history";
 
-export const API_URL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}/`;
+export const API_URL = `https://todoit-backend.herokuapp.com/`;
 
 export function omit<T extends object, K extends keyof T>(
     target: T,
