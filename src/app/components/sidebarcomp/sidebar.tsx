@@ -2,6 +2,7 @@ import React ,{ useState } from "react";
 import style from "./style.css";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { GroupItem } from "../common/groupitem"
 
 interface SideBarProps {
     isSelected?: boolean;
@@ -92,6 +93,8 @@ export const SideBar: React.FC<SideBarProps> = ({ isSelected, compStyle }) => {
                             Add New List
                         </a>
                     </li>
+                    <GroupItem
+                    />
                 </ul>
             </div>
         </div>

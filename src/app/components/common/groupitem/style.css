@@ -1,7 +1,6 @@
 .groupItemDiv {
-    background-color: #4a4158;
-    font-size: 20px;
-    width: 300px;
+    background-color: #43425d;
+    font-size: 15px;
     text-align: center;
     font-family: "B612", sans-serif;
     color: #fff;
@@ -13,18 +12,11 @@
     overflow-x: auto;
 }
 
-.groupItemDiv:hover {
-    color: #eceff1;
-    background-color: #35303e;
-    border-left: 5px solid #8684ba;
-    transition: all 0.5s ease 0s;
-}
-
 .groupItemDiv input {
     padding: 10px 20px;
     border: none;
     background: #8e97ff;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     font-family: sans-serif;
 }

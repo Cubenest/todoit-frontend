@@ -29,9 +29,18 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onChange, onFocus }) => {
         priority: 0,
         groupId: "",
     };
+
+    // const [searchItem, setsearchItem] = useState(true);
+    // const toggleDrop = () =>setsearchItem(!searchItem);
+    
+    
     return (
         <div>
-            <ExpandingSearchBox onChange={onChange} />
+            <ExpandingSearchBox onChange={onChange}
+            // onFocus={() =>toggleDrop()}
+       
+            />
+        {/* {searchItem &&( */}
             <SearchBarContainer
                 groups={[
                     group,
@@ -66,6 +75,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onChange, onFocus }) => {
                     todo,
                 ]}
             />
+            {/* )} */}
         </div>
     );
 };

@@ -43,8 +43,8 @@ export const App = ({ history, location }: App.Props) => {
     const toDateElem = new Date();
 
     // GroupItem
-
-    const [task, setTask] = useState("");
+    
+    const [Edited, setEdited] = useState(false);
 
     return (
         <div className={style.normal}>
@@ -312,17 +312,17 @@ export const App = ({ history, location }: App.Props) => {
                         >
                             <h3>Group item Component</h3>
                             <GroupItem
-                                title={task}
-                                placeholder="Add New Group"
-                                type="input"
+                            title={"Add Group"}
+                            placeholder="Add New Group"
+                            type="input"
+                            isEdit={false}
                             >
-                                <input
-                                    type="text"
-                                    name="task"
-                                    placeholder="Write Group Name"
-                                    value={task}
-                                    onChange={(e) => setTask(e.target.value)}
-                                />
+                            <input
+                                type="text"
+                                name="task"
+                                placeholder="Write Group Name"
+                                // onChange={(e, i) => Edited(i)}
+                            />
                             </GroupItem>
                         </div>
                         <br/>

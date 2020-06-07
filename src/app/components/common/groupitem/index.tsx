@@ -1,4 +1,4 @@
-import React ,{ useState, useEffect  } from "react";
+import React from "react";
 import style from "./style.css";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +11,7 @@ interface GroupItemProps {
     isSelected?:boolean;
     onClick?: (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
     compStyle?: string;
+    isEdit?: boolean;
     
 }
 
@@ -21,30 +22,21 @@ export const GroupItem: React.FC<GroupItemProps> = ({
     children,
     isSelected,
     compStyle,
-    onClick  
+    onClick,
+    isEdit, 
 }) => {
     const groupItemDivStyle = classNames(style.groupItemDiv);
-
-    const [isEditing, setEditing] = useState(false);
-
-    const handleKeyDown = (event:any, type:any) => {
-        // Handle when key is pressed
-        console.log(handleKeyDown);
-      };
 
     return (
 
     <div className={groupItemDivStyle}>
-      {isEditing ? (
-        <div 
-          onBlur={() => setEditing(false)}
-          onKeyDown={e => handleKeyDown(e, type)}
-        >
+      {isEdit ? (
+        <div>
           {children}
         </div>
       ) : (
         <div 
-          onClick={() => setEditing(true)}
+          onClick={onClick}
         >
           <span>
             {title || placeholder || "Editable content"}
