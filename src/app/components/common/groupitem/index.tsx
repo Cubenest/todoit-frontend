@@ -5,9 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface GroupItemProps {
     title?: string;
-    type?:string;
-    placeholder?:string;
-    children?:React.ReactElement;
     isSelected?:boolean;
     onClick?: (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
     compStyle?: string;
@@ -17,9 +14,6 @@ interface GroupItemProps {
 
 export const GroupItem: React.FC<GroupItemProps> = ({ 
     title, 
-    type,
-    placeholder,
-    children,
     isSelected,
     compStyle,
     onClick,
@@ -32,20 +26,27 @@ export const GroupItem: React.FC<GroupItemProps> = ({
     <div className={groupItemDivStyle}>
       {isEdit ? (
         <div>
-          {children}
+         <input
+           value={title}
+            type="text"
+            placeholder="Write Group Name"
+          />
+          <div style={{float:"right"}}>
+            <FontAwesomeIcon icon={["fas", "share-alt"]} />
+        </div> 
         </div>
       ) : (
         <div 
           onClick={onClick}
-        >
-          <span>
-            {title || placeholder || "Editable content"}
-          </span>
-        </div>
-      )}
+        > 
+        {title}
         <div style={{float:"right"}}>
-            <FontAwesomeIcon icon={["fas", "share-alt"]} />
-        </div> 
+            <FontAwesomeIcon icon={["fas", "check"]} />
+         </div> 
+        </div>
+         
+      )}
+       
     </div>
     );
 };

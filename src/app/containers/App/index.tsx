@@ -313,17 +313,9 @@ export const App = ({ history, location }: App.Props) => {
                             <h3>Group item Component</h3>
                             <GroupItem
                             title={"Add Group"}
-                            placeholder="Add New Group"
-                            type="input"
                             isEdit={false}
-                            >
-                            <input
-                                type="text"
-                                name="task"
-                                placeholder="Write Group Name"
-                                // onChange={(e, i) => Edited(i)}
                             />
-                            </GroupItem>
+                            
                         </div>
                         <br/>
                         <div
