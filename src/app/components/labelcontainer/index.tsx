@@ -16,14 +16,17 @@ const COLORS = [
 export const LabelContainer: React.FC<LabelContainerProps> = ({ items }) => {
     return (
         <div className={style.container}>
-            {items.map((i: string, index: number) => (
-                <Label
-                    key={i}
-                    titleElement={i}
-                    compStyle={style.item}
-                    backgroundColor={COLORS[index]}
-                />
-            ))}
+            {items.map(
+                (i: string, index: number) =>
+                    i.length > 0 && (
+                        <Label
+                            key={i}
+                            titleElement={i}
+                            compStyle={style.item}
+                            backgroundColor={COLORS[index]}
+                        />
+                    )
+            )}
         </div>
     );
 };

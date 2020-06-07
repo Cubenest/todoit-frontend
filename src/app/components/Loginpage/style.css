@@ -1,10 +1,21 @@
+.logo {
+    text-align: center;
+    color: #fff;
+    height: 80px;
+    margin-top: 50px;
+
+    background-color: #2980b9;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
 .container {
     text-align: center;
     color: #fff;
-    margin-top: 100px;
-    height: 500px;
+    margin-top: 50px;
+    height: 350px;
     background-color: #2980b9;
     padding: 5rem 2rem;
+    border-radius: 1rem;
 }
 
 .container > header {
@@ -39,6 +50,7 @@
 }
 
 .headerHeadings.signUp {
+    transform: translateY(-36px);
 }
 
 .headerHeadings.forgot {
@@ -203,4 +215,9 @@
 .google:hover,
 .google:focus {
     background: #e74b37;
+}
+
+.image {
+    width: 200px;
+    border-radius: 0 !important;
 }

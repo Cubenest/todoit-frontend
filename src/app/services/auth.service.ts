@@ -4,7 +4,7 @@ import { API_URL } from "app/utils";
 class AuthService {
     login(email: string, password: string) {
         return axios
-            .post(API_URL + "login", {
+            .post(API_URL + "api/login", {
                 email,
                 password,
             })
@@ -22,7 +22,7 @@ class AuthService {
     }
 
     register(email: string, password: string, confirmPassword: string) {
-        return axios.post(API_URL + "signup", {
+        return axios.post(API_URL + "api/signup", {
             email,
             password,
             confirmPassword,
@@ -30,7 +30,7 @@ class AuthService {
     }
 
     forgotPassword(email: string) {
-        return axios.post(API_URL + "forgot", { email });
+        return axios.post(API_URL + "api/forgot", { email });
     }
 
     getCurrentUser() {
@@ -39,11 +39,14 @@ class AuthService {
     }
 
     verifyToken(token: string) {
-        return axios.get(API_URL + "reset/" + token);
+        return axios.get(API_URL + "api/reset/" + token);
     }
 
     resetPassword(token: string, password: string, confirm: string) {
-        return axios.post(API_URL + "reset/" + token, { password, confirm });
+        return axios.post(API_URL + "api/reset/" + token, {
+            password,
+            confirm,
+        });
     }
 }
 

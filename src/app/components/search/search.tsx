@@ -32,16 +32,16 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onChange, onFocus }) => {
 
     // const [searchItem, setsearchItem] = useState(true);
     // const toggleDrop = () =>setsearchItem(!searchItem);
-    
-    
+
     return (
         <div>
-            <ExpandingSearchBox onChange={onChange}
-            // onFocus={() =>toggleDrop()}
-       
+            <ExpandingSearchBox
+                onChange={onChange}
+                // onFocus={() =>toggleDrop()}
             />
-        {/* {searchItem &&( */}
+            {/* {searchItem &&( */}
             <SearchBarContainer
+                show={false}
                 groups={[
                     group,
                     group,

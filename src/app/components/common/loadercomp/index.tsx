@@ -1,15 +1,17 @@
 import React from "react";
+import style from "./style.css";
+import loader from "../../../../assets/loader.gif";
 
-interface LoaderCompProps {
-   
-}
+interface LoaderCompProps {}
 
 export const LoaderComp: React.FC<LoaderCompProps> = () => {
-   
     return (
-
-    <div>
-        <img src="assets/loader.gif" alt="loader"/>
-    </div>
+        <div className={style.container}>
+            <img
+                src={loader}
+                alt="loader"
+                style={{ width: 200, height: 200 }}
+            />
+        </div>
     );
 };

@@ -6,16 +6,17 @@ import { Modal, TitleEdit, Label, RadioGroup } from "../common";
 import { TodoItem } from "../todoItem";
 import { EditLabelContainer } from "../labelcontainer";
 import ReactDatePicker from "react-datepicker";
-import { ModalData } from "app/utils";
+import { ModalData, PRIORITY_VALUES } from "app/utils";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface TodoItemModalProps {
-    onclose: (data: ModalData) => void;
+    onClose: (data: ModalData) => void;
     data?: ModalData;
     isOpen: boolean;
 }
 
 export const TodoItemModal: React.FC<TodoItemModalProps> = ({
-    onclose,
+    onClose,
     data,
     isOpen,
 }) => {
@@ -23,19 +24,12 @@ export const TodoItemModal: React.FC<TodoItemModalProps> = ({
     const [title, setTitle] = useState<string>("");
     const [labels, setLabel] = useState<string[]>([]);
     const [priority, setPriority] = useState<string>("med");
-    const [dueDate, setDueDate] = useState<Date | null>(date);
-    const [editData, setEditData] = useState<ModalData>();
-    const PRIORITY_VALUES = ["low", "med", "high"];
+    const [dueDate, setDueDate] = useState<Date>(date);
 
-    useEffect(() => {
-        if (data) {
-            setEditData(data);
-        }
-    }, []);
     return (
         <Modal
             isModalOpen={isOpen}
-            closeModal={() => onclose({ title, labels, priority, dueDate })}
+            closeModal={() => onClose((undefined as unknown) as ModalData)}
             overlayStyle={style.overlay}
             modalStyle={style.modal}
         >
@@ -43,9 +37,10 @@ export const TodoItemModal: React.FC<TodoItemModalProps> = ({
                 isEdit={true}
                 title={
                     <TitleEdit
-                        value={editData?.title || title}
+                        value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         fontSize={26}
+                        compoStyle={title.length <= 0 ? style.titleError : null}
                     />
                 }
                 titleStyle={style.title}
@@ -53,43 +48,61 @@ export const TodoItemModal: React.FC<TodoItemModalProps> = ({
                     <div
                         style={{
                             display: "flex",
-                            flexDirection: "column",
                             alignItems: "center",
+                            justifyContent: "center",
                         }}
                     >
-                        <ReactDatePicker
-                            showTimeSelect
-                            selected={editData?.dueDate || dueDate}
-                            onChange={(date) => setDueDate(date)}
-                            popperPlacement="bottom-end"
-                            customInput={
-                                <Label
-                                    titleElement={
-                                        dueDate === date
-                                            ? "set due date"
-                                            : moment(dueDate).format("Do MMM")
-                                    }
-                                    backgroundColor={"#50eea0"}
-                                    onClick={() => null}
-                                />
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                            }}
+                        >
+                            <ReactDatePicker
+                                showTimeSelect
+                                selected={dueDate}
+                                onChange={(date) => setDueDate(date as Date)}
+                                popperPlacement="bottom-end"
+                                customInput={
+                                    <Label
+                                        titleElement={
+                                            dueDate === date
+                                                ? "set due date"
+                                                : moment(dueDate).format(
+                                                      "Do MMM"
+                                                  )
+                                        }
+                                        backgroundColor={"#50eea0"}
+                                        onClick={() => null}
+                                    />
+                                }
+                            />
+                            <RadioGroup
+                                items={PRIORITY_VALUES}
+                                selected={PRIORITY_VALUES.indexOf(priority)}
+                                activeStyle={classNames(style[priority])}
+                                onchange={(e) => setPriority(e)}
+                            />
+                        </div>
+                        <div
+                            onClick={() =>
+                                title.length > 0 &&
+                                onClose({ title, labels, priority, dueDate })
                             }
-                        />
-                        <RadioGroup
-                            items={PRIORITY_VALUES}
-                            selected={PRIORITY_VALUES.indexOf(
-                                editData?.priority || priority
-                            )}
-                            activeStyle={classNames(style[priority])}
-                            onchange={(e) => setPriority(e)}
-                        />
+                            className={classNames(style.fab, "drop-shadow-all")}
+                        >
+                            <FontAwesomeIcon
+                                icon={["fas", "check"]}
+                                size={"3x"}
+                            />
+                        </div>
                     </div>
                 }
                 label={
                     <EditLabelContainer
-                        items={editData?.labels || labels}
-                        onAdd={(v) =>
-                            v.length > 0 && setLabel((labels) => [...labels, v])
-                        }
+                        items={labels}
+                        onAdd={(v) => setLabel((labels) => [...labels, v])}
                         onRemove={(index) =>
                             setLabel(
                                 (labels) =>

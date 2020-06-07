@@ -24,7 +24,7 @@ import {
     SucessMessage,
     LoaderComp,
 } from "app/components";
-import {ErrorMessage} from "app/components/common/errormessage";
+import { ErrorMessage } from "app/components/common/errormessage";
 export namespace App {
     export interface Props extends RouteComponentProps<void> {}
 }
@@ -43,7 +43,7 @@ export const App = ({ history, location }: App.Props) => {
     const toDateElem = new Date();
 
     // GroupItem
-    
+
     const [Edited, setEdited] = useState(false);
 
     return (
@@ -312,12 +312,12 @@ export const App = ({ history, location }: App.Props) => {
                         >
                             <h3>Group item Component</h3>
                             <GroupItem
-                            title={"Add Group"}
-                            isEdit={false}
+                                title={"Add Group"}
+                                isEdit={false}
+                                onAdd={() => null}
                             />
-                            
                         </div>
-                        <br/>
+                        <br />
                         <div
                             style={{
                                 display: "flex",
@@ -327,10 +327,11 @@ export const App = ({ history, location }: App.Props) => {
                         >
                             <h3>Error message item Component</h3>
                             <ErrorMessage
-                            message={"error message "}
-                            compStyle={style.dropshadowall}
+                                message={"error message "}
+                                compStyle={style.dropshadowall}
                             />
-                        </div><br/>
+                        </div>
+                        <br />
                         <div
                             style={{
                                 display: "flex",
@@ -340,10 +341,11 @@ export const App = ({ history, location }: App.Props) => {
                         >
                             <h3>Error message item Component</h3>
                             <WarningMessage
-                            message={"Warning message "}
-                            compStyle={style.dropshadowall}
+                                message={"Warning message "}
+                                compStyle={style.dropshadowall}
                             />
-                        </div><br/>
+                        </div>
+                        <br />
                         <div
                             style={{
                                 display: "flex",
@@ -353,8 +355,8 @@ export const App = ({ history, location }: App.Props) => {
                         >
                             <h3>Error message item Component</h3>
                             <SucessMessage
-                            message={"Sucess message "}
-                            compStyle={style.dropshadowall}
+                                message={"Sucess message "}
+                                compStyle={style.dropshadowall}
                             />
                         </div>
                         <div
@@ -365,13 +367,11 @@ export const App = ({ history, location }: App.Props) => {
                             }}
                         >
                             <h3>Error message item Component</h3>
-                            <LoaderComp
-                            />
+                            <LoaderComp />
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <Login /> */}
             <Register />
         </div>
     );

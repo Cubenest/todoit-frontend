@@ -9,7 +9,6 @@
     flex: 1;
 }
 
-
 /* Sidebar Styles */
 
 .sidebar {
@@ -25,6 +24,10 @@
     transition: all 0.5s ease;
 }
 
+a,
+li {
+    cursor: pointer;
+}
 .sidebar header {
     background-color: #8684ba;
     font-size: 20px;
@@ -44,8 +47,8 @@
     color: #fff;
 }
 
-.nav>li>a,
-.navdropdown>li>a {
+.nav > li > a,
+.navdropdown > li > a {
     position: relative;
     display: block;
     padding: 10px 15px;
@@ -68,6 +71,11 @@
     font-family: "B612", sans-serif;
 }
 
+.navdropdown {
+    overflow-y: scroll;
+    height: 400px;
+}
+
 .sidebar .nav a:hover,
 .navdropdown a:hover {
     color: #eceff1;
@@ -86,9 +94,6 @@
 .sidebar .nav a i {
     margin-right: 16px;
 }
-
-
-/* dropdown */
 
 .dropdownmenu {
     display: block;

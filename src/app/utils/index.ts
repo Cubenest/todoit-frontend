@@ -1,6 +1,6 @@
 import { createBrowserHistory } from "history";
 
-export const API_URL = "http://localhost:3001/";
+export const API_URL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}/`;
 
 export function omit<T extends object, K extends keyof T>(
     target: T,
@@ -18,6 +18,7 @@ export interface RowProps<T> {
     index: number;
     style: any;
     data: T;
+    onClick: (index: number) => void;
 }
 
 export enum STATUS {
@@ -28,11 +29,28 @@ export enum STATUS {
     Trashed = 3,
 }
 
+export const STATUS_VALUES = [
+    "New",
+    "inProgress",
+    "completed",
+    "Archived",
+    "Trashed",
+];
+
 export interface ModalData {
     title: string;
     labels: string[];
     priority: string;
-    dueDate: Date | null;
+    dueDate: Date;
+    status?: string;
 }
+
+export const PRIORITY_VALUES = ["low", "med", "high"];
+
+export const PriorityMap: any = {
+    low: 0,
+    med: 1,
+    hight: 2,
+};
 
 export const history = createBrowserHistory();

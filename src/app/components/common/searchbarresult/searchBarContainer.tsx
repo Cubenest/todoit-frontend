@@ -8,14 +8,19 @@ import style from "./style.css";
 export interface SearchBarContainerProps {
     groups: GroupModel[];
     todos: TodoModel[];
+    show: boolean;
 }
 
 export const SearchBarContainer: React.FC<SearchBarContainerProps> = ({
     groups,
     todos,
+    show,
 }) => {
     return (
-        <div className={classNames(style.searchContainer, "drop-shadow-all")}>
+        <div
+            className={classNames(style.searchContainer, "drop-shadow-all")}
+            style={{ display: !show ? "none" : "" }}
+        >
             {groups && groups.length > 0 ? (
                 <SearchGroupResult items={groups} />
             ) : (

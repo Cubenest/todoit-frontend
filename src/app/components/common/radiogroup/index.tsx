@@ -15,18 +15,18 @@ export const RadioGroup: React.FC<RadioGroupProps> = ({
     selected,
     activeStyle,
 }) => {
-    let childrenComp = items.map((i, index) => (
+    const childrenComp = items.map((i, index) => (
         <button
             key={index}
             type="button"
-            className={
-                (classNames(style.button),
+            className={classNames(
+                style.button,
                 selected === index
                     ? activeStyle
                         ? activeStyle
                         : style.active
-                    : "")
-            }
+                    : null
+            )}
             onClick={(e) => onchange(i)}
         >
             {i}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import style from "./style.css";
 import classNames from "classnames";
+import logo from "../../../assets/logo.png";
 
 interface FormProps {
     option: number;
@@ -125,10 +126,10 @@ export const Form: React.FC<FormProps> = ({
                     ? "Sign up"
                     : "Reset password"}
             </button>
-            {option !== 4 && (
+            {/* {option !== 4 && (
                 <div style={{ marginTop: 5, marginBottom: 5 }}>OR</div>
-            )}
-            {option !== 4 && (
+            )} */}
+            {/* {option !== 4 && (
                 <div style={{ display: "flex", flexDirection: "row" }}>
                     <button
                         className={classNames(style.loginBtn, style.facebook)}
@@ -146,7 +147,7 @@ export const Form: React.FC<FormProps> = ({
                         Login with Google
                     </button>
                 </div>
-            )}
+            )} */}
         </form>
     );
 };
@@ -176,53 +177,59 @@ export const Login: React.FC<LoginProps> = ({
     onClick,
 }) => {
     return (
-        <div className={style.container}>
-            <header>
-                <div
-                    className={classNames(
-                        style.headerHeadings,
-                        option === 1
-                            ? style.signIn
-                            : option === 2
-                            ? style.signUp
-                            : style.forgot
-                    )}
-                >
-                    <span>Sign in to your account</span>
-                    <span>Create an account</span>
-                    <span>Reset your password</span>
-                </div>
-            </header>
-            {option !== 4 && (
-                <ul className={style.options}>
-                    <li
-                        className={option === 1 ? style.active : ""}
-                        onClick={(e) => onClick(e, 1)}
+        <div>
+            <div className={style.logo}>
+                <img src={logo} alt="logo" className={style.image} />
+            </div>
+            <div className={style.container}>
+                <header>
+                    <div
+                        className={classNames(
+                            style.headerHeadings,
+                            "drop-shadow-all",
+                            option === 1
+                                ? style.signIn
+                                : option === 2
+                                ? style.signUp
+                                : style.forgot
+                        )}
                     >
-                        Sign in
-                    </li>
-                    <li
-                        className={option === 2 ? style.active : ""}
-                        style={{ marginLeft: "15px" }}
-                        onClick={(e) => onClick(e, 2)}
-                    >
-                        Sign up
-                    </li>
-                    <li
-                        className={option === 3 ? style.active : ""}
-                        style={{ marginLeft: "auto" }}
-                        onClick={(e) => onClick(e, 3)}
-                    >
-                        Forgot
-                    </li>
-                </ul>
-            )}
-            <Form
-                option={option}
-                onClickGoogle={onClickGoogle}
-                onClickFacebook={onClickFacebook}
-                onSubmit={onSubmit}
-            />
+                        <span>Sign in to your account</span>
+                        <span>Create an account</span>
+                        <span>Reset your password</span>
+                    </div>
+                </header>
+                {option !== 4 && (
+                    <ul className={style.options}>
+                        <li
+                            className={option === 1 ? style.active : ""}
+                            onClick={(e) => onClick(e, 1)}
+                        >
+                            Sign in
+                        </li>
+                        <li
+                            className={option === 2 ? style.active : ""}
+                            style={{ marginLeft: "15px" }}
+                            onClick={(e) => onClick(e, 2)}
+                        >
+                            Sign up
+                        </li>
+                        <li
+                            className={option === 3 ? style.active : ""}
+                            style={{ marginLeft: "auto" }}
+                            onClick={(e) => onClick(e, 3)}
+                        >
+                            Forgot
+                        </li>
+                    </ul>
+                )}
+                <Form
+                    option={option}
+                    onClickGoogle={onClickGoogle}
+                    onClickFacebook={onClickFacebook}
+                    onSubmit={onSubmit}
+                />
+            </div>
         </div>
     );
 };

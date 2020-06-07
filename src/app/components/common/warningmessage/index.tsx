@@ -6,22 +6,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 interface WarningMessageProps {
     message?: string;
     compStyle?: string;
-    
 }
 
-export const WarningMessage: React.FC<WarningMessageProps> = ({ 
-    message, 
+export const WarningMessage: React.FC<WarningMessageProps> = ({
+    message,
     compStyle,
 }) => {
     const styleWarningMessageContainer = classNames(style.warningcontainer);
     const styleWarningMessage = classNames(style.warningmessage);
 
     return (
-
-    <div className={styleWarningMessageContainer} >
-        <FontAwesomeIcon icon={["fas", "exclamation-triangle"]}
-        size="3x" />
-        <div className={styleWarningMessage}>{message}</div>
-    </div>
+        <div className={styleWarningMessageContainer}>
+            <FontAwesomeIcon icon={["fas", "exclamation-triangle"]} size="3x" />
+            <div className={styleWarningMessage}>{message}</div>
+        </div>
     );
 };

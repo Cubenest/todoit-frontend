@@ -4,7 +4,7 @@ import authHeader from "./auth-header";
 
 class UserService {
     getUserInfo() {
-        return axios.get(API_URL + "account", { headers: authHeader() });
+        return axios.get(API_URL + "api/account", { headers: authHeader() });
     }
 }
 

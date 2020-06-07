@@ -57,6 +57,7 @@ body {
 .popovertext {
     font-size: 14px;
     color: #8684ba;
+    cursor: pointer;
 }
 .segment {
     display: "flex";
@@ -72,4 +73,35 @@ body {
 
 .todoList {
     height: 100%;
+}
+
+.fab {
+    display: flex;
+    /* width: 100%; */
+    flex: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 3rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #8684ba;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    color: white;
+}
+
+.fab:hover {
+    border: 3px solid #43425d;
+}
+
+.modal {
+    width: auto !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
 }
