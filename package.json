@@ -3,7 +3,7 @@
     "version": "1.1.1",
     "private": true,
     "description": "A frontend boilerplate with React hooks, Redux and Typescript",
-    "homepage": "https://github.com/Cubenest/todoit-frontend",
+    "homepage": "https://harry-harish.github.io/todoit-frontend",
     "keywords": [
         "react",
         "hooks",
@@ -15,7 +15,7 @@
     "main": "index.js",
     "scripts": {
         "predeploy": "npm run build",
-        "deploy": "gh-pages -b development -d build",
+        "deploy": "gh-pages -d build",
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
         "build": "webpack -p --progress --colors"
