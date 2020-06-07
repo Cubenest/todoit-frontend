@@ -74,7 +74,7 @@ export const Home = ({ history, location }: Home.Props) => {
                         group.data.groups[0]._id
                     );
                     setSelectedGroup(group.data);
-                    setGroupList(group.data);
+                    setGroupList({ groups: [group.data], count: 0 });
                     setTodoList(todos.data);
                     setIsLoading(false);
                 }

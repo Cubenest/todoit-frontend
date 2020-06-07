@@ -93,6 +93,13 @@ export const LoginPage: React.FC<LoginProps> = ({}) => {
             setIsLoading(false);
         }
     };
+
+    const handleGoogle = async () => {
+        try {
+            await authService.authGoogle();
+        } catch (error) {}
+    };
+
     return (
         <div className={style.container}>
             <Modal
@@ -110,7 +117,7 @@ export const LoginPage: React.FC<LoginProps> = ({}) => {
             </Modal>
             <Login
                 onClickFacebook={(e) => console.log(e)}
-                onClickGoogle={(e) => console.log(e)}
+                onClickGoogle={handleGoogle}
                 onSubmit={handleLogin}
                 token={token}
                 onClick={(e, v) => setOption(v)}

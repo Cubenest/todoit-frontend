@@ -1,6 +1,7 @@
 import { createBrowserHistory } from "history";
 
 export const API_URL = `https://todoit-backend.herokuapp.com/`;
+// export const API_URL = `http://localhost:3001/`;
 
 export function omit<T extends object, K extends keyof T>(
     target: T,

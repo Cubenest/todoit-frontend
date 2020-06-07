@@ -128,8 +128,8 @@ export const Form: React.FC<FormProps> = ({
             </button>
             {/* {option !== 4 && (
                 <div style={{ marginTop: 5, marginBottom: 5 }}>OR</div>
-            )} */}
-            {/* {option !== 4 && (
+            )}
+            {option !== 4 && (
                 <div style={{ display: "flex", flexDirection: "row" }}>
                     <button
                         className={classNames(style.loginBtn, style.facebook)}

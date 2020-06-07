@@ -5,7 +5,7 @@ import { PureLabel } from "../purelabel";
 
 interface SegmentButtonProps {
     title?: React.ReactChild;
-    count?: number;
+    count: number;
     isSelected: boolean;
     compStyle?: string;
     onClick?: (ev: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
@@ -34,7 +34,13 @@ export const SegmentButton: React.FC<SegmentButtonProps> = ({
     return (
         <PureLabel
             centreElement={<div className={styleTitle}>{title}</div>}
-            rightElement={<div className={styleCount}>{count}</div>}
+            rightElement={
+                count > 0 ? (
+                    <div className={styleCount}>{count}</div>
+                ) : (
+                    <div></div>
+                )
+            }
             onClick={onClick}
             compStyle={styleContainerTitle}
             borderRadius={30}
